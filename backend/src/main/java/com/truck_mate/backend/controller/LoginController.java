@@ -23,13 +23,14 @@ public LoginController(UserService ser){
     }
     @PostMapping("/user")
     public ResponseEntity<User> createUser(@RequestBody CreateUserRequest req) {
-        User usr = service.createUser(req.fname, req.lname, req.email, req.pd);
+        User usr = service.createUser(req.fname, req.lname, req.email, req.pw);
 
         return ResponseEntity.ok(usr);
     }
 
     @GetMapping("/users")
     public ResponseEntity<List<User>> showAll() {
+
         return ResponseEntity.ok(service.showAll());
     }
     @GetMapping("/users/{email}")

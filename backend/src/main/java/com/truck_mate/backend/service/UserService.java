@@ -17,7 +17,7 @@ public class UserService {
 
     public User createUser( String fname, String lname,String email, String pw ){
 
-        User user = repo.findByEmail(email);
+        //User user = repo.findByEmail(email);
 
        User use=new User();
         use.setFname(fname);
